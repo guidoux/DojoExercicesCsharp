@@ -11,13 +11,10 @@ namespace DojoExercices
         public string withoutX(string str)
         {
             str = str.ToLower();
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (str.StartsWith("x"))                    
-                    str = str.Substring(1);
-                if (str.EndsWith("x"))
-                    str = str.Substring(0, str.Length - 1);
-            }
+            if (str.StartsWith("x"))                    
+                str = str.Substring(1);
+            if (str.EndsWith("x"))
+                str = str.Substring(0, str.Length - 1);
             return str;
         }
     }
